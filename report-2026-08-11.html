@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A股市场情绪日报 · 2026-08-11</title>
+<script>
+// 跨日兜底：本页是历史交易日(非今天)时，打开即跳转到门户(永远指向最新一天)，
+// 避免收藏旧链接后一直看到过期内容。
+(function(){
+  var rd="2026-08-11".split("-");
+  var pd=new Date(rd[0], rd[1]-1, rd[2]);
+  var t=new Date(); t.setHours(0,0,0,0);
+  if(!isNaN(pd) && pd.getTime() < t.getTime()){ location.replace("index.html"); }
+})();
+</script>
 <style>
 * { box-sizing:border-box; margin:0; padding:0 }
 :root {
@@ -370,7 +380,7 @@ footer .ln { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:6px }
   </div>
   <div class="ln">
     <span><b>交易日期：</b>2026-08-11（周二）</span>
-    <span><b>数据抓取时间：</b>2026-08-11 17:28</span>
+    <span><b>数据抓取时间：</b>2026-08-12 10:17</span>
     <span><b>样本：</b>龙虎榜 73 条 / 强势股 60 只 / 行业 128 个 / 个股 5542 只
        / 涨停 58 · 跌停 1 · 炸板 17</span>
   </div>
