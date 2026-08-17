@@ -7,11 +7,16 @@
 <script>
 // 跨日兜底：本页是历史交易日(非今天)时，打开即跳转到门户(永远指向最新一天)，
 // 避免收藏旧链接后一直看到过期内容。
+// 注意：URL 带 ?src=portal 标记（门户"今天未发布→回退最近交易日"跳来的）时不再弹回门户，
+// 否则门户↔旧报告会无限互跳（表现为页面疯狂刷新）。
 (function(){
   var rd="2026-08-14".split("-");
   var pd=new Date(rd[0], rd[1]-1, rd[2]);
   var t=new Date(); t.setHours(0,0,0,0);
-  if(!isNaN(pd) && pd.getTime() < t.getTime()){ location.replace("index.html"); }
+  if(!isNaN(pd) && pd.getTime() < t.getTime()
+     && location.search.indexOf("src=portal") < 0){
+    location.replace("index.html");
+  }
 })();
 </script>
 <style>
@@ -380,7 +385,7 @@ footer .ln { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:6px }
   </div>
   <div class="ln">
     <span><b>交易日期：</b>2026-08-14（周五）</span>
-    <span><b>数据抓取时间：</b>2026-08-14 17:41</span>
+    <span><b>数据抓取时间：</b>2026-08-17 13:45</span>
     <span><b>样本：</b>龙虎榜 74 条 / 强势股 64 只 / 行业 128 个 / 个股 5543 只
        / 涨停 63 · 跌停 10 · 炸板 19</span>
   </div>
