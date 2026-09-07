@@ -25,7 +25,7 @@
 /* 门户自动跳转：打开即跳到「今天」的报告；今天未发布（周末/未出）则回退最近交易日。
    这样收藏根目录 https://.../af-daily/ 每天打开都是最新可用的一天。 */
 (function(){
-  var latest = "report-2026-08-21.html";            // 最近交易日报告（发布时写死）
+  var latest = "report-2026-09-07.html";            // 最近交易日报告（发布时写死）
   var d = new Date();
   var y = d.getFullYear();
   var m = String(d.getMonth()+1).padStart(2,'0');
@@ -43,9 +43,10 @@
 <div class="wrap">
   <h1>A股情绪日报 · 报告门户</h1>
   <div class="sub">每日收盘后（约 17:30）自动生成 · 数据以收盘定稿为准</div>
-  <a class="latest" href="report-2026-08-21.html"><b>最新报告 · 2026-08-21</b><span class="go">打开 →</span></a>
+  <a class="latest" href="report-2026-09-07.html"><b>最新报告 · 2026-09-07</b><span class="go">打开 →</span></a>
   <h2>历史报告</h2>
   <ul>
+    <li><a href="report-2026-09-07.html">2026-09-07</a></li>
     <li><a href="report-2026-08-21.html">2026-08-21</a></li>
     <li><a href="report-2026-08-20.html">2026-08-20</a></li>
     <li><a href="report-2026-08-19.html">2026-08-19</a></li>
